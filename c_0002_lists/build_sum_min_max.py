@@ -11,7 +11,7 @@
 print("Введите список чисел через пробел:")
 try:
     l = input().split()
-    intL = list(map(lambda x: int(x), l))
+    intL = list(int(l[i]) for i in range(len(l)))
     print(sum(intL), max(intL), min(intL))
 except ValueError:
     print(-1)
